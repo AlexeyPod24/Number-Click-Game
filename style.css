@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    }
+    
+    body, html {
+    min-width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    }
+    
+    
+    img {
+        max-width: 100%;
+        display: block;
+    }
+
+   
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 24%;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .grid {
+        border: 2px solid black;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        
+       
+        
+    }
+
+    .square {
+        border: 2px solid black;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .time {
+        padding-bottom: 2em;
+        padding-top: 1em;
+    }
+
+    .btn {
+        margin: 1em;
+    }
+
+    .buttons {
+        display: flex;
+    }
