@@ -27,7 +27,7 @@
         justify-content: center;
         align-items: center;
         width: 24%;
-        background-color: white;
+        background-color: #6688CC;
         border-radius: 10px;
     }
 
@@ -36,7 +36,7 @@
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        background-color: white;
+        background-color: #ACBFE6;
         justify-content: center;
         align-items: center;
         gap: 2px;
@@ -54,6 +54,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: #000000;
     }
 
     .time {
@@ -63,8 +64,23 @@
 
     .btn {
         margin: 1em;
+        padding: 1em;
+        border-radius: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        background-color:#6688CC;
+        border: 2px solid black;
     }
+
+    .btn:hover {
+        background-color: #ACBFE6
+    }
+   
 
     .buttons {
         display: flex;
+    }
+
+    .square-selected {
+        background-color: red;
     }
