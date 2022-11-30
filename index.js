@@ -8,17 +8,16 @@
 
 // const squaresCount = prompt('How many squares do you want?')
 
-let startBtn = document.querySelector('.start-btn')
-let resetBtn = document.querySelector('.reset-btn')
-let timer = document.querySelector('.time__countdown')
+const startBtn = document.querySelector('.start-btn')
+const resetBtn = document.querySelector('.reset-btn')
+const timer = document.querySelector('.time__countdown')
 const squares = document.querySelectorAll('.grid .square');
 let gameStarted = false;
 let counter = 60
 let timeInterval;
 
+let clickedSquares = []
 
-
-let nums = []
 
 
 
@@ -68,32 +67,31 @@ function getRandomColor() {
 function randomNumber() {
   const numArray = []
     
-
-
     for (let i = 1; i < 26; i++) {
         numArray.push(i)
-
     }
-    
-    numArray.sort(() => 0.5 - Math.random())
 
+    numArray.sort(() => 0.5 - Math.random())
 
     for (let i = 0; i < squares.length; i++) {
         const random = Math.floor(Math.random() * 25)
     
          squares[i].textContent = numArray[i]
-         if (numArray[i] === 1) squares[i].addEventListener('click', function() { 
-             squares[i].style.backgroundColor = 'red'
-             squares[i].classList.add('clicked')
-             
-             
-        })
+         squares[i].style.fontSize = random + 15 + "px";
+         squares[i].style.color = getRandomColor()
+         squares[i].style.backgroundColor = '#000000'
+         squares[i].addEventListener('click', function() { 
+              clickedSquares.push(numArray[i])
+              console.log(clickedSquares)
 
-
-
-        squares[i].style.fontSize = random + 15 + "px";
-        squares[i].style.color = getRandomColor()
-        squares[i].style.backgroundColor = '#000000'
+              clickedSquares.map((x) => {
+                if (clickedSquares.includes(x - 1)) {
+                    return squares[i].style.backgroundColor = 'green'
+                }
+              })
+              
+              
+         })
 }
 
 
@@ -114,6 +112,7 @@ resetBtn.addEventListener('click', function() {
     
 
 })
+
 
 
 
