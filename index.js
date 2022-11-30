@@ -84,10 +84,18 @@ function randomNumber() {
               clickedSquares.push(numArray[i])
               console.log(clickedSquares)
 
-              clickedSquares.map((x) => {
-                if (clickedSquares.includes(x - 1)) {
-                    return squares[i].style.backgroundColor = 'green'
-                }
+              clickedSquares.map((x,y) => {
+                
+                if (clickedSquares[0] === 1 && x === 1) {
+                  return squares[i].style.backgroundColor = 'green'
+                } else if (clickedSquares[1] === 2 && x === 2 && clickedSquares[0] === 1 && x === 1) {
+
+                } return squares[i].style.backgroundColor = 'green'
+                
+                
+                console.log(x)
+                console.log(clickedSquares[0])
+
               })
               
               
